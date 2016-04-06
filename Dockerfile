@@ -16,3 +16,6 @@ RUN ["java", "-version"]
 # Install latest Gradle build
 RUN apt-get install -y gradle
 RUN ["gradle", "-v"]
+
+# Install other tools
+RUN sudo apt-get -y install zip
