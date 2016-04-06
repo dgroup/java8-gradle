@@ -1,7 +1,7 @@
 FROM ubuntu:14.04
 
 # Allows to add external repositories
-RUN sudo apt-get install software-properties-common -y
+RUN apt-get install -y software-properties-common
 
 # Add and refresh external repositories
 RUN add-apt-repository -y ppa:webupd8team/java
@@ -18,4 +18,5 @@ RUN apt-get install -y gradle
 RUN ["gradle", "-v"]
 
 # Install other tools
-RUN sudo apt-get -y install zip
+RUN apt-get install -y zip
+RUN apt-get install -y git
