@@ -1,4 +1,5 @@
 FROM ubuntu:14.04
+MAINTAINER Yurii Dubinka <ydantezs@yandex.ru>
 
 # Allows to add external repositories
 RUN apt-get install -y software-properties-common
@@ -20,3 +21,4 @@ RUN ["gradle", "-v"]
 # Install other tools
 RUN apt-get install -y zip
 RUN apt-get install -y git
+RUN apt-get install -y curl
